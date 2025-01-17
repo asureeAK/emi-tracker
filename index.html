@@ -5,12 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMI Tracker - Loans Overview</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0052a3;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>EMI Tracker</h1>
             <div class="nav">
+                <a href="index.html" class="btn">Overview</a>
                 <a href="loan1.html">Loan 1</a>
                 <a href="loan2.html">Loan 2</a>
                 <a href="loan3.html">Loan 3</a>
@@ -22,16 +50,27 @@
                 <h2>Loan 1</h2>
                 <div class="loan-details">
                     <div class="summary-item">
-                        <span>Principal:</span>
+                        <span>Principal Amount:</span>
                         <span>₹200,000</span>
                     </div>
                     <div class="summary-item">
-                        <span>Remaining:</span>
+                        <span>Total Interest:</span>
+                        <span>₹40,000</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Monthly Payment:</span>
+                        <span>₹8,000</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Balance Amount:</span>
                         <span>₹104,000</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 56.67%"></div>
                     </div>
                     <div class="summary-item">
                         <span>Progress:</span>
-                        <span>17/30 payments</span>
+                        <span>17/30 payments (56.67%)</span>
                     </div>
                 </div>
                 <a href="loan1.html" class="btn">View Details</a>
@@ -40,7 +79,10 @@
             <div class="loan-card">
                 <h2>Loan 2</h2>
                 <div class="loan-details">
-                    <p>Add Loan 2 details here</p>
+                    <div class="summary-item">
+                        <span>Status:</span>
+                        <span>Add loan details</span>
+                    </div>
                 </div>
                 <a href="loan2.html" class="btn">View Details</a>
             </div>
@@ -48,9 +90,36 @@
             <div class="loan-card">
                 <h2>Loan 3</h2>
                 <div class="loan-details">
-                    <p>Add Loan 3 details here</p>
+                    <div class="summary-item">
+                        <span>Status:</span>
+                        <span>Add loan details</span>
+                    </div>
                 </div>
                 <a href="loan3.html" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+            <h2>Total Summary</h2>
+            <div class="summary-item">
+                <span>Total Principal:</span>
+                <span>₹200,000</span>
+            </div>
+            <div class="summary-item">
+                <span>Total Interest:</span>
+                <span>₹40,000</span>
+            </div>
+            <div class="summary-item">
+                <span>Total Amount:</span>
+                <span>₹240,000</span>
+            </div>
+            <div class="summary-item">
+                <span>Total Paid:</span>
+                <span>₹136,000</span>
+            </div>
+            <div class="summary-item">
+                <span>Total Balance:</span>
+                <span>₹104,000</span>
             </div>
         </div>
     </div>
