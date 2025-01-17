@@ -1,50 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loan 1 EMI Tracker</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Tracker - Loan 1 Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Loan 1 EMI Tracker</h1>
-    <a href="index.html">Back to Loan List</a>
-  </header>
+    <div class="container">
+        <div class="header">
+            <h1>EMI Tracker - Loan 1</h1>
+            <div class="nav">
+                <a href="index.html">Overview</a>
+                <a href="loan1.html">Loan 1</a>
+                <a href="loan2.html">Loan 2</a>
+                <a href="loan3.html">Loan 3</a>
+            </div>
+        </div>
 
-  <!-- Loan Summary -->
-  <section id="loanSummary">
-    <h2>Loan Summary</h2>
-    <p><strong>Principal:</strong> ₹<span id="principal"></span></p>
-    <p><strong>Total Amount:</strong> ₹<span id="totalAmount"></span></p>
-    <p><strong>Total Interest:</strong> ₹<span id="totalInterest"></span></p>
-    <p><strong>Paid Amount:</strong> ₹<span id="paidAmount"></span></p>
-    <p><strong>Remaining Balance:</strong> ₹<span id="balanceAmount"></span></p>
-  </section>
+        <div class="summary-cards">
+            <div class="card">
+                <h2>Loan Summary</h2>
+                <div class="summary-item">
+                    <span>Principal Amount:</span>
+                    <span>₹200,000</span>
+                </div>
+                <div class="summary-item">
+                    <span>Total Interest:</span>
+                    <span>₹40,000</span>
+                </div>
+                <div class="summary-item">
+                    <span>Monthly Payment:</span>
+                    <span>₹8,000</span>
+                </div>
+            </div>
 
-  <!-- EMI Schedule -->
-  <section id="emiTable">
-    <h2>EMI Schedule</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>EMI #</th>
-          <th>Principal</th>
-          <th>Interest</th>
-          <th>Total</th>
-          <th>Date</th>
-          <th>Balance</th>
-        </tr>
-      </thead>
-      <tbody id="emiRows"></tbody>
-    </table>
-  </section>
+            <div class="card">
+                <h2>Payment Progress</h2>
+                <div class="summary-item">
+                    <span>Paid Amount:</span>
+                    <span>₹136,000</span>
+                </div>
+                <div class="summary-item">
+                    <span>Balance Amount:</span>
+                    <span>₹104,000</span>
+                </div>
+                <div class="summary-item">
+                    <span>Payments Made:</span>
+                    <span>17 of 30</span>
+                </div>
+            </div>
+        </div>
 
-  <footer>
-    <p>Powered by Your Company</p>
-  </footer>
+        <div class="chart-container">
+            <h2>Loan Overview</h2>
+            <canvas id="loanChart"></canvas>
+        </div>
 
-  <script src="script.js"></script>
+        <div class="table-container">
+            <h2>Payment Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Date</th>
+                        <th class="amount">Principal</th>
+                        <th class="amount">Interest</th>
+                        <th class="amount">Total</th>
+                        <th class="amount">Balance</th>
+                    </tr>
+                </thead>
+                <tbody id="paymentTableBody">
+                    <!-- Table content will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Chart initialization
+        const ctx = document.getElementById('loanChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Principal', 'Interest', 'Paid Amount', 'Balance'],
+                datasets: [{
+                    label: 'Loan Overview',
+                    data: [200000, 40000, 136000, 104000],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(75, 192, 192, 0.5)',
+                        'rgba(255, 206, 86, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Payment data
+        const payments = [
+            { no: "1st", date: "05-September-2023", principal: 6667, interest: 1333, total: 8000, balance: 232000 },
+            { no: "2nd", date: "04-October-2023", principal: 6667, interest: 1333, total: 8000, balance: 224000 },
+            { no: "3rd", date: "03-November-2023", principal: 6667, interest: 1333, total: 8000, balance: 216000 }
+            // Add more payment data here
+        ];
+
+        // Populate table
+        const tableBody = document.getElementById('paymentTableBody');
+        payments.forEach(payment => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${payment.no}</td>
+                <td>${payment.date}</td>
+                <td class="amount">₹${payment.principal.toLocaleString()}</td>
+                <td class="amount">₹${payment.interest.toLocaleString()}</td>
+                <td class="amount">₹${payment.total.toLocaleString()}</td>
+                <td class="amount">₹${payment.balance.toLocaleString()}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    </script>
 </body>
 </html>
-
