@@ -19,9 +19,65 @@
             </div>
         </div>
 
+        <div class="table-container">
+            <h2>Payment Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No of EMI</th>
+                        <th>Principal</th>
+                        <th>Interest</th>
+                        <th>Total Amount</th>
+                        <th>Paid Date</th>
+                        <th>Balance Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="paymentTableBody">
+                    <tr><td>1st Payment</td><td>6667</td><td>1333</td><td>8000</td><td>05-Sep-23</td><td>232000</td></tr>
+                    <tr><td>2nd Payment</td><td>6667</td><td>1333</td><td>8000</td><td>04-Oct-23</td><td>224000</td></tr>
+                    <tr><td>3rd Payment</td><td>6667</td><td>1333</td><td>8000</td><td>03-Nov-23</td><td>216000</td></tr>
+                    <tr><td>4th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>05-Dec-23</td><td>208000</td></tr>
+                    <tr><td>5th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>08-Jan-24</td><td>200000</td></tr>
+                    <tr><td>6th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>08-Feb-24</td><td>192000</td></tr>
+                    <tr><td>7th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>05-Mar-24</td><td>184000</td></tr>
+                    <tr><td>8th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>11-Apr-24</td><td>176000</td></tr>
+                    <tr><td>9th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>10-May-24</td><td>168000</td></tr>
+                    <tr><td>10th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>10-Jun-24</td><td>160000</td></tr>
+                    <tr><td>11th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>10-Jul-24</td><td>152000</td></tr>
+                    <tr><td>12th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>10-Aug-24</td><td>144000</td></tr>
+                    <tr><td>13th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>10-Sep-24</td><td>136000</td></tr>
+                    <tr><td>14th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>10-Oct-24</td><td>128000</td></tr>
+                    <tr><td>15th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>10-Nov-24</td><td>120000</td></tr>
+                    <tr><td>16th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>10-Dec-24</td><td>112000</td></tr>
+                    <tr><td>17th Payment</td><td>6667</td><td>1333</td><td>8000</td><td>10-Jan-25</td><td>104000</td></tr>
+                    <tr><td>18th Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>96000</td></tr>
+                    <tr><td>19th Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>88000</td></tr>
+                    <tr><td>20th Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>80000</td></tr>
+                    <tr><td>21st Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>72000</td></tr>
+                    <tr><td>22nd Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>64000</td></tr>
+                    <tr><td>23rd Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>56000</td></tr>
+                    <tr><td>24th Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>48000</td></tr>
+                    <tr><td>25th Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>40000</td></tr>
+                    <tr><td>26th Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>32000</td></tr>
+                    <tr><td>27th Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>24000</td></tr>
+                    <tr><td>28th Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>16000</td></tr>
+                    <tr><td>29th Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>8000</td></tr>
+                    <tr><td>30th Payment</td><td>6667</td><td>1333</td><td>8000</td><td></td><td>0</td></tr>
+                </tbody>
+            </table>
+        </div>
+
         <div class="summary-cards">
             <div class="card">
                 <h2>Loan Summary</h2>
+                <div class="summary-item">
+                    <span>Total Payments:</span>
+                    <span>30</span>
+                </div>
+                <div class="summary-item">
+                    <span>Monthly EMI:</span>
+                    <span>₹8,000</span>
+                </div>
                 <div class="summary-item">
                     <span>Principal Amount:</span>
                     <span>₹200,000</span>
@@ -31,148 +87,80 @@
                     <span>₹40,000</span>
                 </div>
                 <div class="summary-item">
-                    <span>Monthly Payment:</span>
-                    <span>₹8,000</span>
-                </div>
-                <div class="summary-item">
-                    <span>Per Year:</span>
-                    <span>₹96,000</span>
+                    <span>Total Amount:</span>
+                    <span>₹240,000</span>
                 </div>
             </div>
 
             <div class="card">
                 <h2>Payment Progress</h2>
                 <div class="summary-item">
-                    <span>Paid Amount:</span>
+                    <span>Payments Made:</span>
+                    <span>17 of 30</span>
+                </div>
+                <div class="summary-item">
+                    <span>Principal Paid:</span>
+                    <span>₹113,339</span>
+                </div>
+                <div class="summary-item">
+                    <span>Interest Paid:</span>
+                    <span>₹22,661</span>
+                </div>
+                <div class="summary-item">
+                    <span>Total Paid:</span>
                     <span>₹136,000</span>
                 </div>
                 <div class="summary-item">
                     <span>Balance Amount:</span>
                     <span>₹104,000</span>
                 </div>
-                <div class="summary-item">
-                    <span>Payments Made:</span>
-                    <span>17 of 30</span>
-                </div>
-                <div class="summary-item">
-                    <span>Balance Principal:</span>
-                    <span>₹86,667</span>
-                </div>
-                <div class="summary-item">
-                    <span>Balance Interest:</span>
-                    <span>₹17,333</span>
-                </div>
             </div>
-        </div>
-
-        <div class="chart-container">
-            <h2>Loan Overview</h2>
-            <canvas id="loanChart"></canvas>
-        </div>
-
-        <div class="table-container">
-            <h2>Payment Schedule</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Date</th>
-                        <th class="amount">Principal</th>
-                        <th class="amount">Interest</th>
-                        <th class="amount">Total</th>
-                        <th class="amount">Balance</th>
-                    </tr>
-                </thead>
-                <tbody id="paymentTableBody">
-                    <!-- Table content will be populated by JavaScript -->
-                </tbody>
-            </table>
         </div>
     </div>
 
-    <script>
-        // Chart initialization
-        const ctx = document.getElementById('loanChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Principal', 'Interest', 'Paid Amount', 'Balance'],
-                datasets: [{
-                    label: 'Loan Overview',
-                    data: [200000, 40000, 136000, 104000],
-                    backgroundColor: [
-                        'rgba(54, 162, 235, 0.5)',
-                        'rgba(255, 99, 132, 0.5)',
-                        'rgba(75, 192, 192, 0.5)',
-                        'rgba(255, 206, 86, 0.5)'
-                    ],
-                    borderColor: [
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(255, 206, 86, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        // Full payment data
-        const payments = [
-            { no: "1st", date: "05-September-2023", principal: 6667, interest: 1333, total: 8000, balance: 232000 },
-            { no: "2nd", date: "04-October-2023", principal: 6667, interest: 1333, total: 8000, balance: 224000 },
-            { no: "3rd", date: "03-November-2023", principal: 6667, interest: 1333, total: 8000, balance: 216000 },
-            { no: "4th", date: "05-December-2023", principal: 6667, interest: 1333, total: 8000, balance: 208000 },
-            { no: "5th", date: "08-January-2024", principal: 6667, interest: 1333, total: 8000, balance: 200000 },
-            { no: "6th", date: "08-February-2024", principal: 6667, interest: 1333, total: 8000, balance: 192000 },
-            { no: "7th", date: "05-March-2024", principal: 6667, interest: 1333, total: 8000, balance: 184000 },
-            { no: "8th", date: "11-April-2024", principal: 6667, interest: 1333, total: 8000, balance: 176000 },
-            { no: "9th", date: "10-May-2024", principal: 6667, interest: 1333, total: 8000, balance: 168000 },
-            { no: "10th", date: "10-June-2024", principal: 6667, interest: 1333, total: 8000, balance: 160000 },
-            { no: "11th", date: "10-July-2024", principal: 6667, interest: 1333, total: 8000, balance: 152000 },
-            { no: "12th", date: "10-August-2024", principal: 6667, interest: 1333, total: 8000, balance: 144000 },
-            { no: "13th", date: "10-September-2024", principal: 6667, interest: 1333, total: 8000, balance: 136000 },
-            { no: "14th", date: "10-October-2024", principal: 6667, interest: 1333, total: 8000, balance: 128000 },
-            { no: "15th", date: "10-November-2024", principal: 6667, interest: 1333, total: 8000, balance: 120000 },
-            { no: "16th", date: "10-December-2024", principal: 6667, interest: 1333, total: 8000, balance: 112000 },
-            { no: "17th", date: "10-January-2025", principal: 6667, interest: 1333, total: 8000, balance: 104000 },
-            { no: "18th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 96000 },
-            { no: "19th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 88000 },
-            { no: "20th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 80000 },
-            { no: "21st", date: "", principal: 6667, interest: 1333, total: 8000, balance: 72000 },
-            { no: "22nd", date: "", principal: 6667, interest: 1333, total: 8000, balance: 64000 },
-            { no: "23rd", date: "", principal: 6667, interest: 1333, total: 8000, balance: 56000 },
-            { no: "24th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 48000 },
-            { no: "25th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 40000 },
-            { no: "26th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 32000 },
-            { no: "27th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 24000 },
-            { no: "28th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 16000 },
-            { no: "29th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 8000 },
-            { no: "30th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 0 }
-        ];
-
-        // Populate table
-        const tableBody = document.getElementById('paymentTableBody');
-        payments.forEach(payment => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${payment.no}</td>
-                <td>${payment.date}</td>
-                <td class="amount">₹${payment.principal.toLocaleString()}</td>
-                <td class="amount">₹${payment.interest.toLocaleString()}</td>
-                <td class="amount">₹${payment.total.toLocaleString()}</td>
-                <td class="amount">₹${payment.balance.toLocaleString()}</td>
-            `;
-            tableBody.appendChild(row);
-        });
-    </script>
+    <style>
+        .table-container {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
 </body>
 </html>
