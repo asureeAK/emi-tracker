@@ -34,6 +34,10 @@
                     <span>Monthly Payment:</span>
                     <span>₹8,000</span>
                 </div>
+                <div class="summary-item">
+                    <span>Per Year:</span>
+                    <span>₹96,000</span>
+                </div>
             </div>
 
             <div class="card">
@@ -49,6 +53,14 @@
                 <div class="summary-item">
                     <span>Payments Made:</span>
                     <span>17 of 30</span>
+                </div>
+                <div class="summary-item">
+                    <span>Balance Principal:</span>
+                    <span>₹86,667</span>
+                </div>
+                <div class="summary-item">
+                    <span>Balance Interest:</span>
+                    <span>₹17,333</span>
                 </div>
             </div>
         </div>
@@ -113,12 +125,38 @@
             }
         });
 
-        // Payment data
+        // Full payment data
         const payments = [
             { no: "1st", date: "05-September-2023", principal: 6667, interest: 1333, total: 8000, balance: 232000 },
             { no: "2nd", date: "04-October-2023", principal: 6667, interest: 1333, total: 8000, balance: 224000 },
-            { no: "3rd", date: "03-November-2023", principal: 6667, interest: 1333, total: 8000, balance: 216000 }
-            // Add more payment data here
+            { no: "3rd", date: "03-November-2023", principal: 6667, interest: 1333, total: 8000, balance: 216000 },
+            { no: "4th", date: "05-December-2023", principal: 6667, interest: 1333, total: 8000, balance: 208000 },
+            { no: "5th", date: "08-January-2024", principal: 6667, interest: 1333, total: 8000, balance: 200000 },
+            { no: "6th", date: "08-February-2024", principal: 6667, interest: 1333, total: 8000, balance: 192000 },
+            { no: "7th", date: "05-March-2024", principal: 6667, interest: 1333, total: 8000, balance: 184000 },
+            { no: "8th", date: "11-April-2024", principal: 6667, interest: 1333, total: 8000, balance: 176000 },
+            { no: "9th", date: "10-May-2024", principal: 6667, interest: 1333, total: 8000, balance: 168000 },
+            { no: "10th", date: "10-June-2024", principal: 6667, interest: 1333, total: 8000, balance: 160000 },
+            { no: "11th", date: "10-July-2024", principal: 6667, interest: 1333, total: 8000, balance: 152000 },
+            { no: "12th", date: "10-August-2024", principal: 6667, interest: 1333, total: 8000, balance: 144000 },
+            { no: "13th", date: "10-September-2024", principal: 6667, interest: 1333, total: 8000, balance: 136000 },
+            { no: "14th", date: "10-October-2024", principal: 6667, interest: 1333, total: 8000, balance: 128000 },
+            { no: "15th", date: "10-November-2024", principal: 6667, interest: 1333, total: 8000, balance: 120000 },
+            { no: "16th", date: "10-December-2024", principal: 6667, interest: 1333, total: 8000, balance: 112000 },
+            { no: "17th", date: "10-January-2025", principal: 6667, interest: 1333, total: 8000, balance: 104000 },
+            { no: "18th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 96000 },
+            { no: "19th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 88000 },
+            { no: "20th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 80000 },
+            { no: "21st", date: "", principal: 6667, interest: 1333, total: 8000, balance: 72000 },
+            { no: "22nd", date: "", principal: 6667, interest: 1333, total: 8000, balance: 64000 },
+            { no: "23rd", date: "", principal: 6667, interest: 1333, total: 8000, balance: 56000 },
+            { no: "24th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 48000 },
+            { no: "25th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 40000 },
+            { no: "26th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 32000 },
+            { no: "27th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 24000 },
+            { no: "28th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 16000 },
+            { no: "29th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 8000 },
+            { no: "30th", date: "", principal: 6667, interest: 1333, total: 8000, balance: 0 }
         ];
 
         // Populate table
