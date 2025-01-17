@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan 1 EMI Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Loan 1 EMI Tracker</h1>
+    <a href="index.html">Back to Loan List</a>
+  </header>
+
+  <!-- Loan Summary -->
+  <section id="loanSummary">
+    <h2>Loan Summary</h2>
+    <p><strong>Principal:</strong> ₹<span id="principal"></span></p>
+    <p><strong>Total Amount:</strong> ₹<span id="totalAmount"></span></p>
+    <p><strong>Total Interest:</strong> ₹<span id="totalInterest"></span></p>
+    <p><strong>Paid Amount:</strong> ₹<span id="paidAmount"></span></p>
+    <p><strong>Remaining Balance:</strong> ₹<span id="balanceAmount"></span></p>
+  </section>
+
+  <!-- EMI Schedule -->
+  <section id="emiTable">
+    <h2>EMI Schedule</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>EMI #</th>
+          <th>Principal</th>
+          <th>Interest</th>
+          <th>Total</th>
+          <th>Date</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody id="emiRows"></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>Powered by Your Company</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
